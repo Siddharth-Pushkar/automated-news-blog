@@ -1,0 +1,19 @@
+const Navbar = () => {
+    return ( 
+        <nav className="navbar">
+            <h1>My Blog</h1>
+            <div className="links">
+                <a href="/">Home</a>
+                <a href="/create" style = {{
+                    color: "white",
+                    backgroundColor: "#f1356d",
+                    borderRadius: "8px"
+                }}>New Post</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+     );
+}
+ 
+export default Navbar;
