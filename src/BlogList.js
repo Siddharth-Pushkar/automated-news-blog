@@ -1,8 +1,8 @@
-const BlogList = ({ blogs, title}) => {
+const BlogList = ({ blogs, title, handleDelete}) => {
 
     // Here we have used props to pass the data from the parent component (Home2) to the child component (BlogList). We have destructured the props object to get the blogs and title properties. This is a common pattern in React to make the code more readable and maintainable.
 
-    
+
     return ( 
 
         <div className="blog-list">
@@ -15,6 +15,7 @@ const BlogList = ({ blogs, title}) => {
                         <h2>{blog.title}</h2>
                         <p>{blog.body}</p>
                         <p>Author: {blog.author}</p>
+                        <button onClick={() => {handleDelete(blog.id)}}>Delete</button> 
                         <br />
                     </div>
                 </div>    
