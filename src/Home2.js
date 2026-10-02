@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 const Home2 = () => {
 
@@ -12,19 +13,8 @@ const Home2 = () => {
     return ( 
 
         <div className="home"> 
-        
-            <h1>All Blogs</h1>
-            {blogs.map((blog) => (
-                // here we have used map function to loop through the blogs array and display each blog in a div. We have also used the key prop to give each div a unique key. This is important for React to keep track of the elements in the DOM and update them efficiently.
-                <div className="blog-preview">
-                    <div key={blog.id}>
-                        <h2>{blog.title}</h2>
-                        <p>{blog.body}</p>
-                        <p>Author: {blog.author}</p>
-                        <br />
-                    </div>
-                </div>    
-            ))}
+            <BlogList blogs={blogs} title="All Blogs!" />
+            {/* Here we used props to use the blogs card everywhere, but to pass the data from this file to the coming component, we use props. */}
         </div>
 
      );
